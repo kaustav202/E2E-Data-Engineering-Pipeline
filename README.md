@@ -1,5 +1,8 @@
 An end-to-end data engineering pipeline that orchestrates data ingestion, processing, and storage using Apache Airflow, Python, Apache Kafka, Apache Zookeeper, Apache Spark, and Cassandra. All components are containerized with Docker for easy deployment and scalability.
 
+
+
+
 This project serves as a step-by-step guide to building a complete data engineering pipeline, covering everything from data ingestion to processing and storage. Here’s a detailed breakdown:
 
 1. **Data Ingestion with Apache Airflow**:
