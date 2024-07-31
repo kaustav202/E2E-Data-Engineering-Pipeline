@@ -22,3 +22,26 @@ This project serves as a step-by-step guide to building a complete data engineer
 4. **Data Storage with Cassandra**:
    - **High Availability Storage**: The processed data is stored in a Cassandra database. Cassandra is chosen for its high availability and scalability, making it suitable for storing large volumes of processed data.
    - **Fast Data Retrieval**: Cassandra provides fast read and write capabilities, ensuring that the stored data can be accessed quickly for analysis and reporting.
+
+
+### Getting Started
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/airscholar/e2e-data-engineering.git
+   ```
+
+2. **Navigate to the Project Directory**:
+   ```bash
+   cd e2e-data-engineering
+   ```
+
+3. **Start the entrypoint script**:
+   ```bash
+   ./entrypoint.sh
+   ```
+
+4. **Access the Airflow Web Interface**:
+   Open your browser and navigate to `http://localhost:8080` to view the Airflow web interface.
+
+
