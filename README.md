@@ -36,12 +36,16 @@ This project serves as a step-by-step guide to building a complete data engineer
    cd e2e-data-engineering
    ```
 
-3. **Start the entrypoint script**:
+3. **Install Docker**: Ensure you have Docker installed on your machine. You can download and install Docker from [here](https://www.docker.com/products/docker-desktop).
+
+
+4. **Build and Run Containers**: Use Docker Compose to build and run the containers.
    ```bash
-   ./entrypoint.sh
+   docker-compose up --build
    ```
 
-4. **Access the Airflow Web Interface**:
-   Open your browser and navigate to `http://localhost:8080` to view the Airflow web interface.
+5. **Access Components**:
+   - **Airflow Web Interface**: `http://localhost:8080`
+   - **Kafka Control Center**: `http://localhost:9021`
 
 
