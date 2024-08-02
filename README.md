@@ -50,7 +50,7 @@ This project serves as a step-by-step guide to building a complete data engineer
 
 
 ## Running the Application
-After completing the setup steps, you are ready to start streaming.
+After completing the setup steps, it's ready to start streaming.
 
 1. Open the Airflow webserver UI and run the DAG.
   ```
@@ -59,7 +59,7 @@ After completing the setup steps, you are ready to start streaming.
   -user: airflow
   -password: airflow
 
-2. Alternatively, you can use the command line to run the application.
+2. Alternatively, use the command line to run the application.
   - Run the Producer:
   ```
   cd app
@@ -70,3 +70,19 @@ After completing the setup steps, you are ready to start streaming.
   docker exec -it spark-master bash
   spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.0,com.datastax.spark:spark-cassandra-connector_2.12:3.4.0 spark_stream.py
   ```
+
+### Using "cqlsh" Cassandra Query Language Shell
+Using cqlsh to execute SQL batch scripts on the data loaded into Cassandra.
+
+- Enter the Cassandra container:
+   ```
+   docker exec -it cassandra bash
+   ```
+ - then use cassandra query lang shell
+   ```
+   cqlsh
+   ```
+ - start writing your queries, for example show the data
+   ```
+    SELECT * FROM created_users ; 
+   ```
