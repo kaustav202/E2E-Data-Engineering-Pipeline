@@ -28,12 +28,12 @@ This project serves as a step-by-step guide to building a complete data engineer
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/airscholar/e2e-data-engineering.git
+   git clone https://github.com/kaustav202/E2E-Data-Engineering-Pipeline.git
    ```
 
 2. **Navigate to the Project Directory**:
    ```bash
-   cd e2e-data-engineering
+   cd E2E-Data-Engineering-Pipeline
    ```
 
 3. **Install Docker**: Ensure you have Docker installed on your machine. You can download and install Docker from [here](https://www.docker.com/products/docker-desktop).
@@ -49,3 +49,24 @@ This project serves as a step-by-step guide to building a complete data engineer
    - **Kafka Control Center**: `http://localhost:9021`
 
 
+## Running the Application
+After completing the setup steps, you are ready to start streaming.
+
+1. Open the Airflow webserver UI and run the DAG.
+  ```
+  http://localhost:8080/login/
+  ```
+  -user: airflow
+  -password: airflow
+
+2. Alternatively, you can use the command line to run the application.
+  - Run the Producer:
+  ```
+  cd app
+  python ./dags/kafka_stream.py
+  ```
+  - use spark-submit to run the spark Job
+  ```
+  docker exec -it spark-master bash
+  spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.0,com.datastax.spark:spark-cassandra-connector_2.12:3.4.0 spark_stream.py
+  ```
